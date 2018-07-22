@@ -1,6 +1,5 @@
-FROM httpd:2.4.34-alpine
+FROM httpd:latest
 MAINTAINER Jeremy MOREAU
 
-RUN apk update \
-&& apk --no-cache add -y curl git\
-&& apk add --update nodejs
+RUN apt update \
+&& apt-get install -y curl git nodejs
